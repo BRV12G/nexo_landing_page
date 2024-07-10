@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexoGo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aeonik+Pro+TRIAL:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gilroy-Bold:wght@400&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeInBottomRight {
+            0% {
+                opacity: 0;
+                transform: translate(50%, 50%);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        }
+        .animate-fadeInBottomRight {
+            animation: fadeInBottomRight 2s ease-in-out forwards;
+        }
+
+        .flip-card {
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            backface-visibility: hidden;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        
+    </style>
+     <style>
+        .section {
+            height: 100vh;
+            position: fixed;
+            width: 100%;
+            transition: transform 2s ease-out; /* Increased the transition time */
+        }
+
+        #section1 {
+            z-index: 1;
+            transform: translateY(0);
+        }
+
+        #section2 {
+            z-index: 2;
+            transform: translateY(100%);
+        }
+
+        #section3 {
+            z-index: 3;
+            transform: translateY(200%);
+        }
+    </style>
+</head>
+<body class="bg-stone-50">
+    <div>
+        <div class="min-h-screen">
+            <div class="w-full h-22 bg-stone-100 border-b border-black flex items-center justify-between px-10">
+                <img class="w-20 h-20 shadow" src="go.png" />
+                <button type="button" class="w-10 h-10"><img src="options.png"></button>
+            </div>
+            <div class="text-right mt-5 mr-6">
+                <p class="text-black text-2xl md:text-4xl lg:text-5xl font-bold">Your Gateway to</p>
+                <p class="text-black text-2xl md:text-4xl lg:text-5xl font-bold mt-3">Unforgettable Experiences</p>
+            </div>
+            <div class="flex justify-start items-center pl-10 py-10">
+                <div class="text-black text-6xl md:text-8xl lg:text-9xl font-bold animate-fadeInBottomRight">NexoGo</div>
+            </div>
+            <div class="flex justify-end items-center mt-5">
+                <img src="https___lottiefiles.com_animations_scorll-to-explore-Qxog7DhQ1I.gif" alt="NexoGo GIF" class="w-auto md:max-w-sm lg:max-w-lg">
+            </div>
+        </div>
+        <div class="bg-black text-white flex items-center justify-center py-16 px-4 md:px-8 lg:px-16">
+            <div class="max-w-2xl">
+                <p class="text-2xl md:text-3xl lg:text-4xl mb-4">
+                    The story of <span class="text-blue-500">NexoGo</span><br> 
+                    begins with adventure.<br> 
+                    We believe that every<br> 
+                    traveler deserves to<br> 
+                    experience the<br> 
+                    extraordinary. By<br> 
+                    offering exclusive access<br> 
+                    to the best of Goa, we<br> 
+                    elevate your journey with<br> 
+                    unmatched experiences,<br> 
+                    personalized services, and<br> 
+                    unforgettable memories.<br> 
+                    This is the standard<br> 
+                    we're setting. Join NexoGo and<br> 
+                    embark on your ultimate<br> 
+                    Goan adventure today.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="bg-stone-50 w-screen ">
+            <div class="grid grid-cols-2 gap-4">
+                <!-- phpto1  -->
+                <div class="col-span-1 relative">
+                    <div class="bg-orange-200 rounded-lg overflow-hidden shadow-lg relative">
+                        <img src="phpoto1.png" alt="Place to stay" class="w-full h-full">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4">
+                            <h2 class="text-xl font-bold text-white text-center">Start with a place to stay.</h2>
+                            <p class="text-gray-300 mt-6 text-center">Discover countless resorts and hotels with exclusive offers only on NexoGo.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- photo1 ended -->
+                <div>
+                    <!-- photo2 strat -->
+                    <div class="bg-black grid grid-cols-2 rounded-lg ">
+                        <div class="">
+                            <img src="photo2arotATIing animation.gif" alt="Ride Animation" class="w-ful">
+                        </div>
+                        <div class="text-white flex items-center justify-center">
+                            <h2 class="text-2xl font-bold ">Steal your ride <br> with NexoCabs.</h2>
+                        </div>
+                    </div>
+                    <!-- photo2 end -->
+                     <br>
+                    <!-- photo3 start -->
+                    <div class="bg-yellow-300 grid grid-cols-2 rounded-lg ">
+                        <div class="flex items-center justify-center">
+                            <h2 class="text-2xl font-bold ">Explore<br>anything to <br> everything in <br>Goa..</h2>
+                        </div>
+                        <div class="">
+                            <img src="Group 16.png" alt="Ride Animation" class="w-full h-full">
+                        </div>
+                    </div>
+                    <!-- photo 3 end -->
+                </div>
+    
+            </div>
+            <br>
+            <div class="grid grid-cols-3 gap-4">
+                <div>
+                    <div>
+                        <div class="col-span-1">
+                            <div class=" rounded-lg overflow-hidden shadow-lg">
+                                    <img src="Frame 60-1.png" class="w-full h-full">
+                                    <!-- <h2 class="text-xl font-bold">A Nexocide product.</h2> -->
+                            </div>
+                        </div>
+    
+                    </div>
+                    <br>
+                    <div>
+                        <div class="col-span-1">
+                            <div class="bg-blue-100 rounded-lg overflow-hidden shadow-lg">
+                                <img src="Animation - 1720457152390.gif" alt="Image" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                <div class="col-span-1">
+                    <div class="flip-card w-full h-full mx-auto">
+                        <div class="flip-card-inner relative w-full h-full">
+                            <!-- Front of the card -->
+                            <div class="flip-card-front absolute w-full h-full bg-white rounded-lg shadow-lg">
+                                <img src="Flip happens here.png" alt="Front Image" class="w-full h-full">
+                                <div class="absolute inset-0  ">
+                                    <h2 class="text-5xl  text-white px-10 mt-10">Get your 2% <br>cashback.</h2>
+                                    <p class="text-white mt-10 px-10 text-2xl">with your first booking <br> get your relative <br>amount back to you</p>
+                                </div>
+                            </div>
+                            <!-- Back of the card -->
+                            <div class="flip-card-back absolute w-full h-full bg-white rounded-lg shadow-lg flex flex-col justify-between p-4">
+                                <div class="flex-row">
+                                    <h2 class="text-5xl font-bold text-green-400">Book with <br> select<br> merchants and <br> get  even more <br> Daily Cash.</h2>
+                                    <img src="62c577200ed54c005c409228_card-logos 1.png" alt="Merchants" class="w-full h-full mt-4">
+                                </div>
+                                <button class="bg-white text-white  py-2 px-4 rounded self-end"><img src="Property 1=min.png"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <!--section A  -->
+                <div class="bg-black rounded-lg w-auto col-span-1">
+                    <h2 class="text-white text-5xl font-bold px-10 mt-10"> Confused <br>about what <br> do to while in <br> Goa?</h2>
+                    <p class="text-white text-sm px-10 mt-10">Try NexoGo app, your travel guide to<br> make the most out of your Goa trip.<br>Thank us later!</p>
+                    <div class="flex justify-end mr-5"><img src="IMG_7714 1.png"></div>
+                    <div class="flex justify-center p-10"><button class="justify-center"><img  src="Button (1).png"></button></div>
+    
+    
+                </div> 
+    
+            </div>
+            
+        </div>
+        
+     
+        <div>
+            <div class="h-screen w-screen overflow-y-auto my-40">
+                <div class="min-h-screen ">
+                  <img class="w-full" src="WhatsApp Image 2024-07-07 at 5.44.16 PM.jpeg" alt="">
+                </div>
+                <div class="min-h-screen ">
+                  <img class="w-full" src="WhatsApp Image 2024-07-07 at 6.08.24 PM (1).jpeg" alt="">
+                </div>
+                <div class="min-h-screen ">
+                  <img class="w-full" src="WhatsApp Image 2024-07-07 at 6.08.24 PM.jpeg" alt="">
+                </div>
+              </div>
+
+        </div>
+        
+        <style>
+            @media (max-width: 768px) {
+                .text-29xl {
+                    font-size: 2rem;
+                }
+            }
+    
+            @media (max-width: 450px) {
+                .text-29xl {
+                    font-size: 1.5rem;
+                }
+    
+                .text-10xl {
+                    font-size: 1rem;
+                }
+    
+                .text-19xl {
+                    font-size: 1.25rem;
+                }
+    
+                .text-5xl {
+                    font-size: 1.25rem;
+                }
+    
+                .text-lgi {
+                    font-size: 1rem;
+                }
+            }
+    
+            /* Hover effect for the div section */
+            #tu {
+                background: white;
+                transition: background 0.3s ease;
+            }
+    
+            #tu:hover {
+                background: linear-gradient(to right, #e11d48, #fca5a5);
+                color: white;
+            }
+        </style>
+        <div id="section5" class="overflow-x-hidden mb-10 px-10">
+            <div class="mt-20 ml-10 mb-20">
+                <h1 class="text-6xl font-bold md:text-5xl sm:text-3xl xs:text-sm">
+                    See what we have to offer,<br>with offer.
+                </h1>
+            </div>
+        
+            <div class="w-full h-auto relative flex flex-row items-start justify-start p-6 box-border leading-normal tracking-normal overflow-x-auto">
+                <section class="flex flex-row items-start justify-start gap-6 text-left text-29xl text-white font-aeonik-pro-trial">
+                    <!-- Card 1 -->
+                    <div class="w-80 flex-shrink-0 bg-gradient-to-r from-teal-400 to-green-400 flex flex-col items-end justify-start p-6 box-border gap-12">
+                        <div class="self-stretch h-full relative bg-gradient-to-r from-teal-400 to-green-400 hidden"></div>
+                        <div class="self-stretch flex flex-row items-start justify-end py-0 pr-8 pl-6">
+                            <div class="flex-1 flex flex-col items-start justify-start gap-2.5">
+                                <div class="w-full flex flex-row items-start justify-start py-0 px-2 box-border">
+                                    <a class="text-decoration-none flex-1 relative font-bold text-inherit z-10">Luxury Yachts</a>
+                                </div>
+                                <div class="self-stretch flex flex-col items-start justify-start gap-6 text-base font-gilroy-bold">
+                                    <div class="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-2">
+                                        <div class="flex-1 relative z-10">
+                                            Enjoy a luxurious experience on Goa’s beautiful waters
+                                        </div>
+                                    </div>
+                                    <div class="w-52 relative text-5xl inline-block z-10">
+                                        INR 6,999 Onwards
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="w-64 h-40 relative z-10" loading="lazy" alt="" src="Group 28.png" />
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-80 flex-shrink-0 bg-gradient-to-r from-yellow-400 to-red-400 flex flex-col items-end justify-start p-6 box-border gap-12">
+                        <div class="self-stretch h-full relative bg-gradient-to-r from-yellow-400 to-red-400 hidden"></div>
+                        <div class="self-stretch flex flex-row items-start justify-end py-0 pr-8 pl-6">
+                            <div class="flex-1 flex flex-col items-start justify-start gap-2.5">
+                                <div class="w-full flex flex-row items-start justify-start py-0 px-2 box-border">
+                                    <a class="text-decoration-none flex-1 relative font-bold text-inherit z-10">Luxury Yachts</a>
+                                </div>
+                                <div class="self-stretch flex flex-col items-start justify-start gap-6 text-base font-gilroy-bold">
+                                    <div class="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-2">
+                                        <div class="flex-1 relative z-10">
+                                            Enjoy a luxurious experience on Goa’s beautiful waters
+                                        </div>
+                                    </div>
+                                    <div class="w-52 relative text-5xl inline-block z-10">
+                                        INR 6,999 Onwards
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="w-64 h-40 relative z-10" loading="lazy" alt="" src="Group 28.png" />
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="w-80 flex-shrink-0 bg-gradient-to-r from-blue-400 to-purple-400 flex flex-col items-end justify-start p-6 box-border gap-12">
+                        <div class="self-stretch h-full relative bg-gradient-to-r from-blue-400 to-purple-400 hidden"></div>
+                        <div class="self-stretch flex flex-row items-start justify-end py-0 pr-8 pl-6">
+                            <div class="flex-1 flex flex-col items-start justify-start gap-2.5">
+                                <div class="w-full flex flex-row items-start justify-start py-0 px-2 box-border">
+                                    <a class="text-decoration-none flex-1 relative font-bold text-inherit z-10">Luxury Yachts</a>
+                                </div>
+                                <div class="self-stretch flex flex-col items-start justify-start gap-6 text-base font-gilroy-bold">
+                                    <div class="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-2">
+                                        <div class="flex-1 relative z-10">
+                                            Enjoy a luxurious experience on Goa’s beautiful waters
+                                        </div>
+                                    </div>
+                                    <div class="w-52 relative text-5xl inline-block z-10">
+                                        INR 6,999 Onwards
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="w-64 h-40 relative z-10" loading="lazy" alt="" src="Group 28.png" />
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="w-80 flex-shrink-0 bg-gradient-to-r from-indigo-400 to-green-400 flex flex-col items-end justify-start p-6 box-border gap-12">
+                        <div class="self-stretch h-full relative bg-gradient-to-r from-indigo-400 to-green-400 hidden"></div>
+                        <div class="self-stretch flex flex-row items-start justify-end py-0 pr-8 pl-6">
+                            <div class="flex-1 flex flex-col items-start justify-start gap-2.5">
+                                <div class="w-full flex flex-row items-start justify-start py-0 px-2 box-border">
+                                    <a class="text-decoration-none flex-1 relative font-bold text-inherit z-10">Luxury Yachts</a>
+                                </div>
+                                <div class="self-stretch flex flex-col items-start justify-start gap-6 text-base font-gilroy-bold">
+                                    <div class="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-2">
+                                        <div class="flex-1 relative z-10">
+                                            Enjoy a luxurious experience on Goa’s beautiful waters
+                                        </div>
+                                    </div>
+                                    <div class="w-52 relative text-5xl inline-block z-10">
+                                        INR 6,999 Onwards
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="w-64 h-40 relative z-10" loading="lazy" alt="" src="Group 28.png" />
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="w-80 flex-shrink-0 bg-gradient-to-r from-red-400 to-indigo-400 flex flex-col items-end justify-start p-6 box-border gap-12">
+                        <div class="self-stretch h-full relative bg-gradient-to-r from-red-400 to-indigo-400 hidden"></div>
+                        <div class="self-stretch flex flex-row items-start justify-end py-0 pr-8 pl-6">
+                            <div class="flex-1 flex flex-col items-start justify-start gap-2.5">
+                                <div class="w-full flex flex-row items-start justify-start py-0 px-2 box-border">
+                                    <a class="text-decoration-none flex-1 relative font-bold text-inherit z-10">Luxury Yachts</a>
+                                </div>
+                                <div class="self-stretch flex flex-col items-start justify-start gap-6 text-base font-gilroy-bold">
+                                    <div class="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-2">
+                                        <div class="flex-1 relative z-10">
+                                            Enjoy a luxurious experience on Goa’s beautiful waters
+                                        </div>
+                                    </div>
+                                    <div class="w-52 relative text-5xl inline-block z-10">
+                                        INR 6,999 Onwards
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="w-64 h-40 relative z-10" loading="lazy" alt="" src="Group 28.png" />
+                    </div>
+                </section>
+            </div>
+        
+            <div id="tu" class="bg-white text-transparent text-center p-10 mt-10 transition duration-300 ease-in-out hover:text-white hover:bg-gradient-to-r hover:from-red-300 hover:to-red-300">
+                <div class="text-5xl font-bold font-['Cirka'] mb-4">Feeling adventurous?</div>
+                <div class="text-2xl font-bold font-['Cirka']">Book with NexoGo and get ready to unlock hidden gems, exclusive perks, and a lifetime supply of 'Why didn't I do this sooner?' moments</div>
+            </div>
+        </div>
+       <div class="w-[1458px] h-[806px] bg-black rounded-bl-[75px] rounded-br-[75px] flex items-center justify-center">
+        <div class="w-[1247px] text-center text-white text-6xl font-bold font-['Cirka']">
+            Your pockets deserve a vacation too! Download<br> 
+            the NexoGo app now and keep all your <br> 
+            adventures in one place.
+        </div>
+    </div>
+    
+       <div class="bg-stone-100 text-black">
+        <div class="container mx-auto py-6 px-4">
+            <div class="flex justify-between items-start">
+                <!-- Left Side -->
+                <div>
+                    <p class="font-bold">A Nexocide Product</p>
+                </div>
+    
+                <!-- Right Side -->
+                <div class="flex space-x-16">
+                    <div>
+                        <p class="font-bold">More by Nexocide</p>
+                        <a href="#" class="block">NexoCabs</a>
+                    </div>
+                    <div>
+                        <p class="font-bold">About Us</p>
+                        <p class="block">Info 1</p>
+                        <p class="block">Info 1</p>
+                        <p class="block">Info 1</p>
+                        <p class="block">Info 1</p>
+                        <p class="block">Info 1</p>
+                    </div>
+                    <div>
+                        <p class="font-bold">Contact</p>
+                        <p class="block">Info 1</p>
+                        <p class="block">Info 1</p>
+                        <p class="block">Info 1</p>
+                        <p class="block">Info 1</p>
+                        <p class="block">Info 1</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Image Section -->
+            <div class="mt-16 flex justify-center">
+                <img src="NexoGo.png" alt="NexoGo" class="opacity-80">
+            </div>
+        </div>
+    </div>
+ </div>
+</body>
+</html>
